@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Profile </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: white;
+    margin: auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 40%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+/* Add Animation */
+@-webkit-keyframes animatetop {
+    from {top:-300px; opacity:0} 
+    to {top:0; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* The Close Button */
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+    //background-color: green;
+    color: black;
+	text-align:center;
+}
+
+.modal-body {
+padding: 2px 16px;
+margin: 10px;
+
+}
+
+.form {
+   margin-left:auto;
+   margin-right:auto;
+   width:50%;
+   
+}
+
+#submit {
+    background-color: green ; 
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+	margin: auto;
+}
+
+</style>
+</head>
+<body>
+
+
+<!-- Trigger/Open The Modal -->
+<button id="profile">Make Profile</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h3 style="color:red">&nbsp;&nbsp;&nbsp;&nbsp;Profile</h3>
+      </div>
+    <div class="modal-body">
+	
+	<form class="form" action="/action_page.php">
+
+        <div class="w3-section">
+        
+        <h4> About Studio </h4>
+		<textarea type="text" id="about" rows="5" cols="20" placeholder="Describe your Studio." name="about" required style="width:100%"></textarea><br>
+		
+		 <h4> Personal Information </h4>
+		 
+		 <input type="file" id="profileImage" name="profileImage" required><br><br>
+		 
+		 <input type="tel" id="contactNo" placeholder="Enter Contact No" name="contactNo" required style="width:100%"><br><br>
+		 
+		 <h4> Professional Information</h4>
+				
+		<textarea type="text" id="awards" rows="5" cols="20" placeholder="Awards." name="awards" required style="width:100%"></textarea><br><br>
+		
+		<input type="text" id="establishedSince" name="establishedSince" placeholder="Established Since" style="width:100%" required> <br><br>
+		
+		<input type="text" id="noofPhotographers" placeholder="No of Photographers" name="noofPhotographers" required style="width:100%"><br><br>
+		
+		 <h4> Service Information </h4>
+		 
+		 <input type="text" id="travel" name="travel" placeholder="Open to Travel?" style="width:100%" required> <br><br>
+		 
+		<textarea type="text" id="typeofService" rows="5" cols="10" placeholder="Type of Service" name="typeofService" required style="width:100%"></textarea><br><br>
+		 
+		<textarea type="text" id="specialization" rows="5" cols="10" placeholder="Specialization" name="specialization" required style="width:100%"></textarea><br><br>
+		
+		 <h4> Recent Work </h4>
+		 
+		  <input type="file" id="Image1" name="Image1" required><br>
+		  <input type="file" id="Image2" name="Image2" required><br>
+		  <input type="file" id="Image3" name="Image3" required><br>
+		  <input type="file" id="Image4" name="Image4" required><br>
+		  <input type="file" id="Image5" name="Image5" required><br>
+		
+		<button class="w3-button w3-block w3-green w3-section w3-padding" id="submit" type="submit">Submit</button><br>
+		    
+	     </div>
+
+      </form>
+
+      </div>
+   
+  </div>
+
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("profile");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

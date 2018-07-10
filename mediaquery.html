@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Media Query</title>
+
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<style>
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+body {
+	margin: 0;
+  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+}
+.img {
+	;
+}
+.topnav {
+  overflow: hidden;
+  background-color: transparent;
+  text-transform: uppercase;
+  
+	background-size: cover;
+	background-position: center;
+	background-image: url('images/header.jpg');
+  
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: WHITE;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+  color: WHITE;
+}
+
+.topnav .icon {
+  display: none;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#heading {
+	margin-left: 33.33%;	
+}
+
+#img1 {
+	
+	
+  }
+  #img2 {
+	
+	
+  }
+  #img3 {
+	margin-left: 10%;
+  }
+  #img4 {
+	margin-left: 10%;
+  }
+  
+@media only screen and (max-width: 768px) {
+    /* For tablets: */
+	  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  #heading {	
+	margin-left: 16.66%; 
+  }
+
+  #img1 {
+	height: 300px;
+	width: 50%;
+  }
+  #img2 {
+	height: 300px;
+	width: 50%;
+  }
+  #img3 {
+  width: 200px;
+  height: 300px;
+	
+  }
+  #img4 {
+  height: 300px;
+  width: 200px;
+	
+  }
+  
+}
+
+</style>
+</head>
+<body>
+
+	<header>
+		<div class="topnav" id="myTopnav">
+					<a href="#home">Home</a>
+					<a href="#home">Login</a>
+					<a href="#news">About</a>
+					<a href="#contact">Contact</a>
+					<a href="#about">Logout</a>
+					<a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>			
+				</div>
+	</header>
+	
+	<section>
+		<div id="heading">										
+					<h2>FIND BY CATEGORY</h2>							
+		</div>
+		<div >
+			
+			
+				<img id="img1" src="Home page pics/wedding.jpg" >		
+			
+			
+			
+				<img id="img2" src="Home page pics/commercial1.jpg" >		
+
+		</div>
+		<br>
+		<br>
+		<div >
+			
+			
+				<img id="img3" src="Home page pics/fashion.jpg" >		
+			
+			
+			
+				<img id="img4" src="Home page pics/kids.jpg" >		
+
+		</div>
+		
+		<hr>
+	</section>
+<body>
+</html>
